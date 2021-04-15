@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+
+/* ===============
+    General styles
+    ============== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #f0f2fc;
+  --button-clr: #00249f;
+  --white: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-clr);
+}
+
+button {
+  background-color: var(--button-clr);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  padding: 1em;
+  margin-top: 2em;
+  color: var(--white);
+  font-weight: 600;
+  width: 100%;
+}
+
+/* ===============
+    Typography
+    ============== */
+
+.wrapper h2 {
+  letter-spacing: 1px;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.wrapper h4 {
+  letter-spacing: 1px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+::placeholder {
+  font-family: "Roboto";
+  color: grey;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* ===============
+    Layout
+    ============== */
+
+.wrapper {
+  width: 75%;
+  margin: 2em auto 0.5em;
+}
+
+input {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  border: none;
+}
+
+.input-box {
+  position: relative;
+}
+
+.fa {
+  padding: 0.68em;
+  border-radius: 4px;
+  color: var(--button-clr);
+  background-color: rgba(243, 241, 241, 0.74);
+  overflow-x: hidden;
+}
+
+.fa-user,
+.fa-envelope,
+.fa-credit-card {
+  position: absolute;
+  top: 0;
+  left: 89%;
+  overflow-x: hidden;
+}
+
+.fa-cc-visa,
+.fa-cc-paypal {
+  background-color: var(--white);
+  width: 40%;
+  padding: 4px;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.dob {
+  width: 25%;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+#b1,
+#b2 {
+  width: 7%;
+  margin-right: 5px;
+}
+
+#bc1,
+#bc2 {
+  width: 7%;
+}
+
+select {
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em 0.5em;
+  margin-right: 4px;
+  overflow: hidden;
+  appearance: none;
+  width: 25%;
+}
+
+button:hover,
+select:hover {
+  cursor: pointer;
+}
+
+/* ===============
+    Media Queries
+    ============== */
+
+@media screen and (min-width: 400px) {
+  .wrapper {
+    max-width: 400px;
+  }
+
+  .fa-user,
+  .fa-envelope,
+  .fa-credit-card {
+    position: absolute;
+    top: 0;
+    left: 92%;
+    overflow: hidden;
+  }
+}
